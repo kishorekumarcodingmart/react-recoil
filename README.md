@@ -9,5 +9,9 @@
 
  2. Wrapper it
 
-    ```<RecoilRoot> <App /> </RecoilRoot>```
+    ```
+    <RecoilRoot> 
+        <App /> 
+    </RecoilRoot>
+    ```
 
