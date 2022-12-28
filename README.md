@@ -1,9 +1,3 @@
-# Atom 
-A piece of state; each atom is like a mini-store on itself and it becomes harder to fall into the previous scenario of Redux since atoms are completely decoupled and aim to hold data that will be updated in one go.
-
-# Selector
-The base where a piece of state is calculated.
-
 **To Install Recoil**
 
 
@@ -47,6 +41,7 @@ The base where a piece of state is calculated.
 
     ```
     import {useRecoilState} from 'recoil'
+
     import {stateValue} from './Recoil/atom'
     ```
 
@@ -58,3 +53,56 @@ The base where a piece of state is calculated.
     <button onClick={()=>setState((prev)=>prev+1)}>App</button>
     ```
 
+-----------------------------------------------------------------------------------
+**Hooks**
+
+1. useRecoilState(state)
+
+Returns a tuple where the first element is the value of state and the second element is a setter function that will update the value of the given state when called.
+
+    ```
+    const [state, setState] = useRecoilState(stateValue)
+
+    <button onClick={()=>setState((prev)=>prev+1)}>App</button>
+    ```
+
+2. useRecoilValue(state)
+
+Returns the value of the given Recoil state.
+
+    ```
+    import { stateValue } from './Recoil/atom'
+
+    import { useRecoilValue } from "recoil";
+
+    const state = useRecoilValue(stateValue);
+    ```
+
+3. useSetRecoilState(state)
+
+Returns a setter function for updating the value of writeable Recoil state.
+
+    ```
+    import { useSetRecoilState } from 'recoil';
+
+    import { stateValue } from './Recoil/atom'
+
+    const setState = useSetRecoilState(stateValue)
+    ```
+
+4. useResetRecoilState(state)
+
+Returns a function that will reset the value of the given state to its default value.
+
+    ```
+    import { useResetRecoilState } from 'recoil';
+
+    import { stateValue } from './Recoil/atom'
+
+    const reset = useResetRecoilState(stateValue)
+
+    const funcToReset = () => {
+        reset()
+    }
+
+    ```
