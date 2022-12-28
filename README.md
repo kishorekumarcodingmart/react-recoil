@@ -1,3 +1,9 @@
+# Atom 
+A piece of state; each atom is like a mini-store on itself and it becomes harder to fall into the previous scenario of Redux since atoms are completely decoupled and aim to hold data that will be updated in one go.
+
+# Selector
+The base where a piece of state is calculated.
+
 **To Install Recoil**
 
 
