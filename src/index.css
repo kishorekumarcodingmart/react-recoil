@@ -1,0 +1,21 @@
+div {
+    padding: 30px;
+    font-size: larger;
+}
+
+
+.app {
+    border: 2px solid red;
+}
+
+.grandParent {
+    border: 2px solid blue;
+}
+
+.parent {
+    border: 2px solid black;
+}
+
+.child {
+    border: 2px solid yellow;
+}
